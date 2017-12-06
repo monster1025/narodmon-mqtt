@@ -1,6 +1,8 @@
 #docker-compose file, because it contains passwords
 config.yml
 config.yaml
+config.json
+config/config.json
 config/config.yaml
 config/config.yml
 

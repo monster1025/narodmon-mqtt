@@ -58,6 +58,7 @@ def send_sensors_state():
 				response = urllib.request.urlopen(request)
 				buf = response.read()
 				result = json.loads(buf.decode('utf-8'))
+				owner = result.get("owner", str(user))
 				for sensor in result.get("sensors", None):
 					id = sensor.get('id', '')
 					name = sensor.get('name', '')
@@ -69,9 +70,9 @@ def send_sensors_state():
 						continue
 					# logger.info(unit + ": " + str(value))
 
-					node = Homie.Node(str(user), "sensors")
+					node = Homie.Node(owner, "sensors")
 					Homie.setNodeProperty(node, sensor_type_desc[stype], value, False)
-					logger.info("Sending user (" + str(user) + ") sensor (" + str(id) + ") value: " + str(value))
+					logger.info("Sending user (" + owner + ") sensor (" + str(id) + ") value: " + str(value))
 		except Exception as e:
 			logger.error("Error updating sensors: " + str(e))
 		time.sleep(timeout)
