@@ -1,0 +1,14 @@
+{
+    "HOST": "127.0.0.1",
+    "PORT": 1883,
+    "KEEPALIVE": 10,
+    "USERNAME": "mqttuser",
+    "PASSWORD": "passw0rd",
+    "DEVICE_ID": "narodmon",
+    "DEVICE_NAME": "narodmon",
+    "TOPIC": "home",
+    "API_KEY": "someapikey_for_narodmon",
+    "USERS": [1089],
+    "SENSOR_TYPES": [11],
+    "SEND_TIMEOUT": 60
+}

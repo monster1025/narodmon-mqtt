@@ -1,0 +1,4 @@
+paho-mqtt==1.2.3
+homie
+urllib3
+

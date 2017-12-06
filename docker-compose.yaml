@@ -1,0 +1,7 @@
+narodmon:
+  build: .
+  dockerfile: Dockerfile-rpi
+  container_name: narodmon
+  volumes:
+    - "./config:/app/config"
+  #restart: always
